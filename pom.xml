@@ -93,7 +93,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-wrapper-plugin</artifactId>
-                <version>0.5.6</version>
+                <version>3.3.2</version>
                 <configuration>
                     <maven>3.8.1</maven>
                 </configuration>
