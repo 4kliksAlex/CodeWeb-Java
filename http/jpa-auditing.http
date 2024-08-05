@@ -3,9 +3,9 @@ POST http://localhost:8080/api/v1/auth/register
 Content-Type: application/json
 
 {
-  "firstname": "Ali",
-  "lastname": "Bouali",
-  "email":  "alibou@mail.com",
+  "firstname": "Alex",
+  "lastname": "Liu",
+  "email":  "test@mail.com",
   "password": "password",
   "role":  "ADMIN"
 }
@@ -19,7 +19,7 @@ Authorization: Bearer {{auth-token}}
 Content-Type: application/json
 
 {
-  "author": "Alibou",
+  "author": "AlexLiu",
   "isbn": "12345"
 }
 
@@ -34,7 +34,7 @@ Content-Type: application/json
 
 {
   "id": 1,
-  "author": "Alibou 2",
+  "author": "AlexLiu 2",
   "isbn": "12345"
 }
 
