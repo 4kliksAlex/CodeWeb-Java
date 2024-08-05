@@ -16,9 +16,8 @@ class CharonConfiguration {
     @Bean(CHARON_CONFIGURER_BEAN)
     CharonConfigurer charonConfigurer() {
         return charonConfiguration()
-//                .set(requestServerNameRewriter().outgoingServers("host1:8080", "host2:8081"))
-                .set(requestServerNameRewriter().outgoingServers("host1:8080"))
+                .set(requestServerNameRewriter().outgoingServers("host1:8081"))
                 .add(requestMapping("mapping name")
-                        .pathRegex("/api/.*"));
+                        .pathRegex("/proxy/.*"));
     }
 }

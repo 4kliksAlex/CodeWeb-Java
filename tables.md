@@ -1,0 +1,7 @@
+relation "token"
+table "_user"
+table "book"
+table "token"
+sequence "_user_seq"
+sequence "book_seq"
+sequence "token_seq"
