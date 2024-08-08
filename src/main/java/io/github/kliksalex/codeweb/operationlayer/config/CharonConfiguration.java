@@ -16,8 +16,8 @@ class CharonConfiguration {
     @Bean(CHARON_CONFIGURER_BEAN)
     CharonConfigurer charonConfigurer() {
         return charonConfiguration()
-                .set(requestServerNameRewriter().outgoingServers("host1:8000"))
-                .add(requestMapping("proxy")
-                        .pathRegex("/.*"));
+                .set(requestServerNameRewriter().outgoingServers("localhost:8000"))
+                .add(requestMapping("non operation layer")
+                        .pathRegex("/(?!auth/|scene/).*"));
     }
 }

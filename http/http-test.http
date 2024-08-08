@@ -1,5 +1,5 @@
 ### Register User
-POST http://localhost:8080/api/v1/auth/register
+POST http://localhost:8080/auth/register
 Content-Type: application/json
 
 {
@@ -13,5 +13,5 @@ Content-Type: application/json
 > {% client.global.set("auth-token", response.body.access_token);  %}
 
 ### Query the Demo endpoint
-GET http://localhost:8080/api/v1/demo-controller
+GET http://localhost:8080/demo-controller
 Authorization: Bearer {{auth-token}}
