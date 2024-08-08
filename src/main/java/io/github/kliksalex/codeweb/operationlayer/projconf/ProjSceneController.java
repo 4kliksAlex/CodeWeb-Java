@@ -1,4 +1,3 @@
-// src/main/java/io/github/kliksalex/codeweb/operationlayer/projconf/ProjConfController.java
 package io.github.kliksalex.codeweb.operationlayer.projconf;
 
 import lombok.RequiredArgsConstructor;
@@ -8,25 +7,25 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/scene")
 @RequiredArgsConstructor
-public class ProjConfController {
-    private final ProjConfService service;
+public class ProjSceneController {
+    private final ProjSceneService service;
 
     @PostMapping
     public ResponseEntity<?> saveScene(
-            @RequestParam String project_name,
+            @RequestParam String projectName,
             @RequestParam String username,
             @RequestBody ProjectScene projectScene
     ) {
-        service.saveScene(project_name, username, projectScene);
+        service.saveScene(projectScene);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping
-    public ResponseEntity<ProjectScene> restoreScene(
-            @RequestParam String project_name,
+    public ResponseEntity<ProjectScene> getScene(
+            @RequestParam String projectName,
             @RequestParam String username
     ) {
-        ProjectScene projectScene = service.restoreScene(project_name, username);
-        return ResponseEntity.ok(projectScene);
+        ProjectScene scene = service.getScene(projectName, username);
+        return ResponseEntity.ok(scene);
     }
 }

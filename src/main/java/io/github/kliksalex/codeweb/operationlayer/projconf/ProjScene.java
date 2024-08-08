@@ -1,22 +1,19 @@
-// src/main/java/io/github/kliksalex/codeweb/operationlayer/projconf/ProjScene.java
 package io.github.kliksalex.codeweb.operationlayer.projconf;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.IdClass;
-import jakarta.persistence.Column;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
-@IdClass(ProjSceneId.class)
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class ProjScene {
-    @Id
-    private String pno;
-
-    @Id
-    private String uno;
-
-    @Column(columnDefinition = "TEXT")
+    @EmbeddedId
+    private ProjSceneId id;
     private String scene;
 }

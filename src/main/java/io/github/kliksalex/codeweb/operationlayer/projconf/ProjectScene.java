@@ -1,23 +1,14 @@
-// src/main/java/io/github/kliksalex/codeweb/operationlayer/projconf/ProjectScene.java
 package io.github.kliksalex.codeweb.operationlayer.projconf;
 
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.List;
-import java.util.Map;
-
-@Data
+@Getter
+@Setter
+@Builder
 public class ProjectScene {
-    private Scene scene;
-
-    @Data
-    public static class Scene {
-        private List<MissionRequest> mission;
-        private String message;
-    }
-
-    @Data
-    public static class MissionRequest {
-        private Map<String, Map<String, Object>> additionalProperties;
-    }
+    private String projectName;
+    private String username;
+    private String scene;
 }
